@@ -13,6 +13,10 @@ DehazeTab represents image patches as feature rows and uses pretrained TabPFN to
 
 This repository provides a standalone inference demo of the **handcrafted-feature variant**. It accepts a folder of hazy images and saves the recovered haze-free images.
 
+<p align="center">
+<img src="docs/dehazetab_idea.png" width="888">
+</p>
+
 ## How It Works
 
 1. **Retrieve references:** encode the input with pretrained ResNet-50 and select similar reference images from the saved embedding index.
