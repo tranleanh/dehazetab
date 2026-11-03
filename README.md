@@ -3,19 +3,15 @@
 [![Preprint](https://img.shields.io/badge/Preprint-arXiv-red)](https://arxiv.org/abs/2610.25142v1)
 [![Data](https://img.shields.io/badge/Data-Hugging_Face-gold)](https://huggingface.co/tranleanh/dehazetab)
 
-**Single-image dehazing with retrieval-guided tabular in-context learning.**
-
-Author: Le-Anh Tran
+<p align="center">
+<img src="docs/dehazetab_idea.png" width="888">
+</p>
 
 ## Introduction
 
 DehazeTab represents image patches as feature rows and uses pretrained TabPFN to estimate their transmission values. Retrieved reference tables provide labeled context for each new image, without gradient-based fine-tuning of TabPFN.
 
 This repository provides a standalone inference demo of the **handcrafted-feature variant**. It accepts a folder of hazy images and saves the recovered haze-free images.
-
-<p align="center">
-<img src="docs/dehazetab_idea.png" width="888">
-</p>
 
 ## How It Works
 
