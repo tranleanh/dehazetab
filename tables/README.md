@@ -4,4 +4,4 @@ Required local data:
 - tables/table_method01_handcrafted/normalization.npz
 - tables/table_method01_handcrafted/{references}.csv
 
-Folow the instructions in README to download the required files and locate them in this folder "/tables".
+Download the data file "tables.zip" from [Hugging Face](https://huggingface.co/tranleanh/dehazetab) and extract it here (check the Repository Layout in the repo's README).
