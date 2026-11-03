@@ -1,6 +1,7 @@
 # DehazeTab: Don't train, just show!
 
 [![Preprint](https://img.shields.io/badge/Preprint-arXiv-red)](https://arxiv.org/abs/2610.25142v1)
+[![Data](https://img.shields.io/badge/Data-Hugging_Face-gold)](https://huggingface.co/tranleanh/dehazetab)
 
 **Single-image dehazing with retrieval-guided tabular in-context learning.**
 
