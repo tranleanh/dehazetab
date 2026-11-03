@@ -1,10 +1,16 @@
-# DehazeTab
+# DehazeTab: Don't train, just show!
+
+[![Preprint](https://img.shields.io/badge/Preprint-arXiv-red)](https://arxiv.org/abs/2610.25142v1)
 
 **Single-image dehazing with retrieval-guided tabular in-context learning.**
 
+Author: Le-Anh Tran
+
+## Introduction
+
 DehazeTab represents image patches as feature rows and uses pretrained TabPFN to estimate their transmission values. Retrieved reference tables provide labeled context for each new image, without gradient-based fine-tuning of TabPFN.
 
-This repository provides a standalone inference demo of the **handcrafted-feature variant**. It accepts a folder of hazy images and saves the recovered haze-free images. Clean reference images and ground-truth transmission maps are not required for the test inputs.
+This repository provides a standalone inference demo of the **handcrafted-feature variant**. It accepts a folder of hazy images and saves the recovered haze-free images.
 
 ## How It Works
 
@@ -82,16 +88,15 @@ Each result is saved as `<input_stem>_dehazed.png`, at the original input dimens
 
 Run `python dehazetab.py --help` for all options, including guided-filter and cache settings. User-supplied relative paths are resolved from the working directory; default table, index, and cache paths are anchored to the script directory.
 
-## Reference Data and Model Weights
+## Citation
+```bibtex
+@article{tran2026image,
+  title={Image Dehazing as In-Context Tabular Inference},
+  author={Tran, Le-Anh},
+  journal={arXiv preprint arXiv:2610.25142},
+  year={2026}
+}
+```
+Have fun!
 
-The retrieval index, reference CSVs, and normalization metadata must correspond to the same reference collection. Original reference images are not needed at inference time; retrieved filenames identify the saved tables.
-
-ResNet-50 and TabPFN v2 use pretrained weights. Local caches are stored under `.cache/torch/` and `.cache/tabpfn/`. If the weights are absent, first use may require network access and any authentication or access approval required by the model provider. Preserve the caches for offline use after setup.
-
-When publishing, keep model caches, credentials, and generated outputs out of ordinary Git commits. Distribute large checkpoints separately only where their licenses permit, and ensure you have permission to redistribute the reference data and example images.
-
-## Timing and Verification
-
-`Proctime` is the full per-image processing time, including retrieval, feature extraction, TabPFN processing, refinement, and PNG saving. It is **not TabPFN-only inference time**; initial retrieval-encoder loading is outside the timer.
-
-The standalone command was tested in `tfmdehaze` on CPU with eight example images. All eight completed successfully, with output dimensions matching their inputs.
+LA Tran
