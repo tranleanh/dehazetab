@@ -1,3 +1,5 @@
+<div align="center">
+
 # DehazeTab: Don't train, just show!
 
 [![Preprint](https://img.shields.io/badge/Preprint-arXiv-red)](https://arxiv.org/abs/2610.25142v1)
@@ -6,6 +8,8 @@
 <p align="center">
 <img src="docs/dehazetab_idea.png" width="888">
 </p>
+
+</div>
 
 ## Introduction
 
